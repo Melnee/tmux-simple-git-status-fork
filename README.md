@@ -48,3 +48,10 @@ A: Frequency of update depends on tmux `status-interval` option. To refresh the 
 *Q: There is a space before and after the status.*
 
 A: Those are added in order to allow easier styling and highlighting (like on screenshot). If you would add an empty space by yourself, you would get empty blocks in your statusline that doesn't hold anything. If you really want it to be removed, please file an issue.
+
+
+Fork Changes:
+👻 = untracked (aka new files)
+➕ = insertions
+➖ = deletions
+🔧 = modified
