@@ -1,8 +1,9 @@
 # Tmux simple git status
 
-Prints current pane git branch and uncommitted changes (if available).
+Prints current pane git branch and uncommitted changes (if available). My updates include emoji, and pipe separator. Also, added two more statuses: if your branch is behind, or if your branch is ahead, of the remote!
 
-![screenshot](https://i.imgur.com/SzOftNt.png)
+<img width="1234" height="383" alt="image" src="https://github.com/user-attachments/assets/43b93cc6-b1ca-47cb-ad03-a4533bc4501e" />
+
 
 ## Installation
 ### Installation with [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm) (recommended)
