@@ -44,7 +44,7 @@ git_status() {
   local status=$(git rev-parse --abbrev-ref HEAD)
   local changes=$(git_changes)
   if [[ -n $status ]]; then
-    printf " $status $changes"
+    printf "|$status $changes"
   fi
 }
 main() {
