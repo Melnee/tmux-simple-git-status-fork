@@ -24,6 +24,9 @@ git_changes() {
     result+=("➖${changes_array[2]}")
   fi
 
+echo "DEBUG ahead: $(git rev-list --count @{u}..HEAD 2>/dev/null)" >&2
+
+
   local ahead=$(git rev-list --count @{u}..HEAD 2>/dev/null || echo 0)
   if [[ $ahead -gt 0 ]]; then
     result+=("⏫$ahead")
