@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-PANE_PATH=$(tmux display-message -p -F "#{pane_current_path}")
-cd $PANE_PATH
 
 git_changes() {
   local changes=$(git diff --shortstat | sed 's/^[^0-9]*\([0-9]*\)[^0-9]*\([0-9]*\)[^0-9]*\([0-9]*\)[^0-9]*/\1;\2;\3/')
