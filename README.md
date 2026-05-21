@@ -1,4 +1,4 @@
-# Tmux simple git status
+# Tmux simple git status, forked to have new features/customization options
 
 Prints current pane git branch and uncommitted changes (if available). My updates include emoji, and pipe separator.
 
@@ -56,10 +56,12 @@ A: Those are added in order to allow easier styling and highlighting (like on sc
 
 
 Fork Changes:
-👻 = untracked (aka new files)
-➕ = insertions
-➖ = deletions
-🔧 = modified
-⏫ = your branch is head of remote
-⏬ = your branch is behind remote
-🚀 = staged changes to commit
+- 👻 = untracked (aka new files)
+- ➕ = insertions
+- ➖ = deletions
+- 🔧 = modified
+- ⏫ = your branch is head of remote
+- ⏬ = your branch is behind remote
+- 🚀 = staged changes to commit
+
+More git statuses coming soon! (Merge conflicts, in a rebase, cherry picking, etc)
