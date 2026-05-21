@@ -24,6 +24,16 @@ git_changes() {
     result+=("➖${changes_array[2]}")
   fi
 
+  local ahead=$(git rev-list --count @{u}..HEAD 2>/dev/null)
+  if [[ -n $ahead && $ahead != 0 ]]; then
+    result+=("⏫$ahead")
+  fi
+
+  local behind=$(git rev-list --count HEAD..@{u} 2>/dev/null)
+  if [[ -n $behind && $behind != 0 ]]; then
+    result+=("⏬$behind")
+  fi
+
   local joined=$(printf " %s" "${result[@]}")
   local joined=${joined:1}
 
