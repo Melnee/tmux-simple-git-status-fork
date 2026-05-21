@@ -27,6 +27,13 @@ git_changes() {
   if [[ $behind -gt 0 ]]; then
     result+=("⏬$behind")
   fi
+
+  local staged=$(git diff --cached --shortstat | sed 's/^[^0-9]*\([0-9]*\)[^0-9]*\([0-9]*\)[^0-9]*\([0-9]*\)[^0-9]*/\1;\2;\3/')
+  local staged_array=(${staged//;/ })
+  if [[ -n ${staged_array[0]} ]]; then
+    result+=("🚀${staged_array[0]}")
+  fi
+
   local joined=$(printf " %s" "${result[@]}")
   local joined=${joined:1}
   if [[ -n $joined ]]; then
